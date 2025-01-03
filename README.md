@@ -82,11 +82,14 @@ customers = pd.read_csv('data/customers.csv')
 
 # Example: Customer Retention - Month over month
 orders['order_month'] = pd.to_datetime(orders['order_date']).dt.to_period('M')
+
 customer_retention = orders.groupby(['order_month', 'customer_id']).size().unstack(fill_value=0)
 
 # Count number of returning customers per month
 customer_retention = customer_retention[customer_retention > 0].count(axis=1)
+
 print(customer_retention)
+
 Contributing
 Contributions are welcome! Feel free to fork the repository and submit pull requests.
 
