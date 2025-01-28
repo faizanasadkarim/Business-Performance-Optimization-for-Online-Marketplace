@@ -35,28 +35,24 @@ The project involves analyzing **customer behavior**, **seller performance**, an
 ## 🧑‍💻 Usage
 Import the necessary libraries and load the dataset:
 ```
-python
-Copy
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 Perform data cleaning and pre-processing:
 
-python
-Copy
+
 # Clean the dataset (remove missing values, duplicates, etc.)
 data_cleaned = data.dropna().drop_duplicates()
 Run cohort analysis or segmentation:
 
-python
-Copy
+
 # Example cohort analysis code
 cohort_data = cohort_analysis(data_cleaned)
 Generate visualizations to gain insights:
 
-python
-Copy
+
 # Example visualization
 sns.lineplot(x='Month', y='Sales', data=sales_trends)
 plt.show()
